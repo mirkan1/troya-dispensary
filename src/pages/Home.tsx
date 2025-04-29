@@ -26,11 +26,9 @@ const Home: React.FC = () => {
         <h1 className="text-4xl font-bold text-[#83E213]">Items On Sale</h1>
         <p className="text-gray-600">(All prices are per item)</p>
       </div>
-
       {/* Products */}
       <div
-        className="w-full max-w-4xl flex flex-row flex-wrap justify-center gap-12"
-        style={{ width: '500px' }}
+        className="w-full max-w-4xl flex flex-row flex-wrap justify-center gap-12 sell-items"
       >
         <PurpleHazeComponent />
         <PurpleHazeComponent />
