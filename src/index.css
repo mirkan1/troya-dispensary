@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Prevent layout shift by always reserving scrollbar space */
+html {
+  overflow-y: scroll;
+}
 
 body {
   margin: 0;

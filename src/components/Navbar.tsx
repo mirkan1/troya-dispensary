@@ -1,5 +1,6 @@
 // src/components/Navbar.tsx
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [language, setLanguage] = useState('en');
@@ -11,27 +12,30 @@ const Navbar: React.FC = () => {
     // Implement your language change logic here
   };
 
+  const linkClasses = ({ isActive }: { isActive: boolean }) =>
+    isActive ? 'text-[#F8420B] font-semibold' : 'text-gray-700 hover:text-[#F8420B]';
+
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md z-10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-[#83E213]">
+            <NavLink to="/" className="text-2xl font-bold text-[#83E213]">
               Troya Dispensary
-            </a>
+            </NavLink>
           </div>
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
-            <a href="#products" className="text-gray-700 hover:text-[#F8420B]">
-              Products
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-[#F8420B]">
+            <NavLink to="/" className={linkClasses} end>
+              Home
+            </NavLink>
+            <NavLink to="/about" className={linkClasses}>
               About
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-[#F8420B]">
+            </NavLink>
+            <NavLink to="/contact" className={linkClasses}>
               Contact
-            </a>
+            </NavLink>
           </div>
           {/* Language Selector */}
           <div className="relative">

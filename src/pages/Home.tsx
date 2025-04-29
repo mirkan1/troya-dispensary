@@ -23,7 +23,7 @@ const Home: React.FC = () => {
     <div className="flex flex-col items-center p-8 space-y-8 bg-white text-gray-800">
       {/* Title */}
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-[#83E213]">Troya Dispensary</h1>
+        <h1 className="text-4xl font-bold text-[#83E213]">Items On Sale</h1>
         <p className="text-gray-600">(All prices are per item)</p>
       </div>
 
